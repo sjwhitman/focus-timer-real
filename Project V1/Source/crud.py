@@ -1,7 +1,10 @@
 """CRUD operations."""
 
-from model import db, User, Movie, Rating, connect_to_db
+from model import db, User, connect_to_db
+from flask import Flask, render_template, request, redirect
 
+#Write out task list functions for adding task to list
+#Add a function to read a task from the list
 
 def create_user(email, password):
     """Create and return a new user."""
@@ -28,14 +31,24 @@ def get_user_by_email(email):
 
     return User.query.filter(User.email == email).first()
 
-def get_duration_from_user(timer_type):
-    # Get input from the user for the duration, as a string
-    duration_minutes = int(input(f"How many minutes will this {timer_type} be?: "))
+def write_task():
+    """Write new task to tasks table"""
+    title = request.form['title']
+    description = request.form['description']
 
-    # Create a timedelta object representing user's chosen duration
-    duration_timedelta = timedelta(minutes=duration_minutes)
+    new_task = Task(title=title, description=description)
+    db.session.add(new_task)
+    db.session.commit()
 
-    return duration_timedelta
+
+# def get_duration_from_user(timer_type):
+#     # Get input from the user for the duration, as a string
+#     duration_minutes = int(input(f"How many minutes will this {timer_type} be?: "))
+
+#     # Create a timedelta object representing user's chosen duration
+#     # duration_timedelta = timedelta(minutes=duration_minutes)
+
+#     return duration_timedelta
 
 
 
