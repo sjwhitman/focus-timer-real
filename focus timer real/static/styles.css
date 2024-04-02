@@ -1,0 +1,129 @@
+body {
+    margin: 20px; /* Adjust the margin value as needed */
+}
+
+body.light {
+    background-color: #ffffff;
+    background-image: url("../static/subtle-prism.svg");
+    background-attachment: fixed;
+}
+
+/* dark Mode */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Specify black text color for task cards in dark mode */
+body.dark .task-card {
+    color: #000;
+}
+
+/* Specify black text color for countdown timer in dark mode */
+body.dark #countdown-timer {
+    color: #000;
+}
+
+/* Logo styling */
+.logo img {
+    width: 500px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* button styling */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 20px;
+    
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* input field styling */
+.input-field {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+/* logout Form */
+.logout-form {
+    text-align: center;
+}
+
+
+/* "Countdown Timer" styling */
+h2 {
+    text-align: center; /* center align "countdown timer" */
+    margin-bottom: 20px; /* add bottom margin for spacing */
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-field {
+    width: 100%; /* adjusted width to fill the container horizontally */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* additional styling for forms container and form columns */
+.forms-container {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 20px;
+    /* height: 50vh; */
+}
+
+
+
+.homepage {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 60vh;
+    
+}
+
+
+
+
+.col{
+     padding-right: 50px; 
+     padding-left: 50px; 
+}
+
+#countdown-timer {
+    font-size: 48px; /* Large size for the timer numbers */
+    background-color: white; /* White background for the timer */
+    color: black; /* Color of the timer numbers */
+    padding: 20px; /* Padding inside the white box */
+    margin: 0 auto; /* Center the timer horizontally */
+    text-align: center; /* Center the timer numbers */
+    border: 2px solid #000; /* Black border around the timer */
+    width: 200px; /* Width of the timer box */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow around the timer box */
+  }
+
+  /* Style for the container of the buttons */
+.countdown-buttons {
+    text-align: center; /* Center the buttons container */
+    margin-top: 20px; /* Space between the timer and the buttons */
+  }
