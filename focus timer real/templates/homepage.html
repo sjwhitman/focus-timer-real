@@ -9,16 +9,21 @@
 
 <h2>Countdown Timer</h2>
 <div id="countdown-timer">00:00</div>
+<!-- Message Display for Timer Mode and Completion -->
+<div id="mode-message" style="margin-top: 10px;">Work timer is set. Ready to start!</div>
 <div class="countdown-buttons">
 <button id="start-timer-btn" class="button">Start</button>
 <button id="pause-timer-btn" class="button">Pause</button>
 <button id="reset-timer-btn" class="button">Reset</button>
 </div>
 
-<script src="{{ url_for('static', filename='frontend.js') }}"></script>
+<!-- Mode Toggle Button -->
+<button id="work-mode-btn" class="button">Work Mode</button>
+<button id="break-mode-btn" class="button">Break Mode</button>
+
 </div>
+
 </div>
 {% endblock %}
 
-
-<!-- #bring user related functionality to its own "profile" page where users can update preferences -->
+<script src="{{ url_for('static', filename='frontend.js') }}"></script>
